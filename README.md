@@ -1,4 +1,12 @@
 # Android-App-Example #
+
+### This is still a work in progress. 
+
+### This project will be updated multiple times a week.
+ 
+### It will demonstrate the main features that can be included in an App made using Android Studio 
+---------
+
 ### To Run the App ###
 * Clone this repo and open it in Android Studio. 
 If you do not have Android Studio installed you can get it for free here: [Android Studio](https://developer.android.com/studio).
