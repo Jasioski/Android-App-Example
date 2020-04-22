@@ -9,15 +9,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // Define button to hide Hello Message
-        Button btnHideMsg = findViewById(R.id.btnHideMsg);
-
-        btnHideMsg.setOnClickListener(new View.OnClickListener() {
+    private void setHideMsgListener(Button btn) {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Log to see if button is responding to clicks at all.
@@ -27,8 +20,20 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.textView).setVisibility(View.INVISIBLE);
             }
         });
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Define button to hide Hello Message
+        Button btnHideMsg = findViewById(R.id.btnHideMsg);
+        // Set listener
+        setHideMsgListener(btnHideMsg);
 
         // TODO: add list to display to show scrolling through a list functionality.
         // TODO: eventually connect to the internet to show that functionality also.
     }
+
 }
