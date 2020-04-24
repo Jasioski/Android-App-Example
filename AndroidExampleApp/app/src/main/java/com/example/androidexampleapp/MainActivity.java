@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +33,15 @@ public class MainActivity extends AppCompatActivity {
         // Set listener
         setHideMsgListener(btnHideMsg);
 
-        // TODO: add list to display to show scrolling through a list functionality.
+        // Define list to display cities
+        TextView lstExample = findViewById(R.id.listExample);
+
+        // Populate the list with cities found from ListItems.java
+        for (String city : ListItems.getCities()) {
+            //Add 3 line breaks between the cities
+            lstExample.append(city + "\n\n\n");
+        }
+
         // TODO: eventually connect to the internet to show that functionality also.
     }
 
