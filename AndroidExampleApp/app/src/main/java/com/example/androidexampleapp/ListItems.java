@@ -8,7 +8,7 @@ public class ListItems {
           "Ottawa",
           "Toronto",
           "London",
-          "St. Johns",
+          "St. John's",
           "Fredericton",
           "Halifax",
           "Quebec City",
