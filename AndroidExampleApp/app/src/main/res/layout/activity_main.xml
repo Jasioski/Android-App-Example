@@ -19,11 +19,11 @@
         app:layout_constraintVertical_bias="0.58" />
 
     <Button
-        android:id="@+id/btnHideMsg"
+        android:id="@+id/btnToggleMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
-        android:text="@string/hide_greet"
+        android:text="@string/toggle_greet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"

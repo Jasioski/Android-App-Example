@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Android Example App</string>
-    <string name="hide_greet">Hide Hello Message</string>
+    <string name="toggle_greet">Hide/Unhide Hello Message</string>
 </resources>

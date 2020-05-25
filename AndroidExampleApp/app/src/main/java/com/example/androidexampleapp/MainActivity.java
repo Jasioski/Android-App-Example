@@ -9,16 +9,24 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private void setHideMsgListener(Button btn) {
+    private void setToggleMsgListener(Button btn) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Log to see if button is responding to clicks at all.
-                Log.i("btnHideMessage", "Button Clicked. Message should now be hidden");
+                Log.i("btnToggleMessage", "Button Clicked. Message visibility is toggled");
 
-                // Hide Hello World Message
-                findViewById(R.id.textView).setVisibility(View.INVISIBLE);
+                TextView helloMsg = findViewById(R.id.textView);
+
+                /* Toggle "Hello World" Message.
+                 * Can't simply use ! to toggle the Visibility because it's an int not a bool.
+                 */
+                if (helloMsg.getVisibility() == View.INVISIBLE) {
+                    helloMsg.setVisibility(View.VISIBLE);
+                }
+                else {
+                    helloMsg.setVisibility(View.INVISIBLE);
+                }
             }
         });
     }
@@ -29,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Define button to hide Hello Message
-        Button btnHideMsg = findViewById(R.id.btnHideMsg);
+        Button btnToggleMsg = findViewById(R.id.btnToggleMsg);
         // Set listener
-        setHideMsgListener(btnHideMsg);
+        setToggleMsgListener(btnToggleMsg);
 
         // Define list to display cities
         TextView lstExample = findViewById(R.id.listExample);
